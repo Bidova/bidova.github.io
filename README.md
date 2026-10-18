@@ -1,5 +1,1 @@
-Bidova GitHub Pages website
-
-Upload index.html, .nojekyll and assets/ to the ROOT of the public Bidova/bidova.github.io repository. Settings > Pages > Deploy from a branch > main / (root).
-
-This website does NOT contain the private application source or a downloadable installer.
+Bidova website + real product handbook (based on Bidova 9.3.20 source). Upload ALL contents of this folder to GitHub Pages repository root. Handbook: /handbook.html. No bidder invitations.
