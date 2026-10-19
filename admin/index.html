@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Bidova Admin — Development Preview</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#0b1524;color:#e9f3fc}
+*{box-sizing:border-box}body{margin:0}header{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:#101f33;border-bottom:1px solid #28405a}header strong{letter-spacing:.12em}main{max-width:1100px;margin:30px auto;padding:0 18px}.warning{padding:15px 18px;border:1px solid #a78431;background:#352d17;border-radius:12px;margin-bottom:22px}.layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(270px,1fr);gap:16px}.panel,.preview{border:1px solid #29425e;border-radius:16px;padding:22px;background:#14253a}label{display:block;font-size:13px;margin:18px 0 8px;color:#bccee2}input[type=text],input[type=color]{width:100%;background:#0d1b2c;color:#eef7ff;border:1px solid #42607c;border-radius:9px;padding:12px;font:inherit}input[type=color]{height:51px;padding:6px}button{background:#287eaf;color:white;border:0;border-radius:10px;padding:12px 18px;font:inherit;font-weight:600;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.small{font-size:13px;color:#b2c6dd}.hero{margin-top:20px;padding:38px 24px;border-radius:14px;background:#0b1829}#cta{display:inline-block;padding:12px 18px;border-radius:10px;color:white;text-decoration:none}h1{font-size:clamp(24px,4vw,42px);line-height:1.14}@media(max-width:760px){.layout{grid-template-columns:1fr}header{padding:16px}}
+</style></head>
+<body>
+<header><strong>BIDOVA <span style="color:#80cfff">ADMIN</span></strong><span class="small">Development prototype</span></header>
+<main>
+<div class="warning" role="alert"><strong>Not a secure admin login or live editor.</strong> This local preview has no authentication, account, data sync, GitHub integration, or publishing. Do not enter credentials. Never deploy this prototype as an operational admin page.</div>
+<div class="layout">
+<section class="preview"><div class="small">Website preview — sample content only</div><div class="hero"><div style="font-weight:700;letter-spacing:.1em">BIDOVA</div><h1 id="preview-headline">Better bids. Built on details.</h1><p>Construction estimating and bid management software.</p><a id="cta" href="#" aria-label="Sample button">Explore Bidova →</a></div></section>
+<aside class="panel"><h2>Quick edit</h2><p class="small">Edit the sample headline and color. Changes are not saved or published.</p><label for="headline">Headline</label><input id="headline" type="text" maxlength="120" value="Better bids. Built on details."><label for="buttonColor">Button color</label><input id="buttonColor" type="color" value="#287eaf"><p class="small">Phone: compact controls. Desktop: detailed sidebar. Advanced page editing and protected publishing come later.</p><button disabled title="Publishing is not connected">Publish — not connected</button></aside>
+</div>
+</main>
+<script>
+const headline=document.getElementById('headline'),preview=document.getElementById('preview-headline'),color=document.getElementById('buttonColor'),cta=document.getElementById('cta');
+headline.addEventListener('input',()=>{preview.textContent=headline.value});
+color.addEventListener('input',()=>{cta.style.backgroundColor=color.value});
+cta.addEventListener('click',e=>e.preventDefault());
+</script></body></html>
