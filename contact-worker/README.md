@@ -5,7 +5,7 @@ Status: **NOT DEPLOYED**. The public Bidova website remains unchanged. This is a
 ## Intended behavior
 - Website: https://bidova.github.io/contact.html
 - Public contact API (to be deployed separately): POST contact information, request type and message.
-- Inbox: bidovasoftware@gmail.com
+- Inbox: the private owner inbox
 - Reply directly from Gmail: provider request uses `reply_to` set to the validated sender's email.
 - No database storage in this scaffold. Resend processes email content according to its policies.
 - Online Send button stays **disabled** until an actual Worker URL and Turnstile site key are configured on contact.html.
@@ -14,12 +14,13 @@ Status: **NOT DEPLOYED**. The public Bidova website remains unchanged. This is a
 
 ## Before any production launch
 1. Review privacy wording, terms and data handling. Do not ask visitors to submit bid PDFs, secrets or sensitive information.
-2. Configure a Resend account and an **approved/verified sending domain**. A Gmail recipient is fine, but a production sending address requires provider verification. Set `FROM_EMAIL` to a verified sender, for example `Bidova <contact@your-verified-domain.example>`.
-3. Create a Cloudflare Turnstile widget for **bidova.github.io**, enable the action `contact` and obtain its public site key and secret key.
-4. Configure Worker secrets (never commit values): `RESEND_API_KEY`, `TURNSTILE_SECRET_KEY`, and `FROM_EMAIL` (can be a secret too).
+2. Configure a Resend account and an **approved/verified sending domain**. An owner inbox recipient is fine, but a production sending address requires provider verification. Set `FROM_EMAIL` to a verified sender, for example `Bidova <contact@your-verified-domain.example>`.
+3. Set the Worker secret `CONTACT_RECIPIENT` to the owner's contact email. Never put it in public source code.
+4. Create a Cloudflare Turnstile widget for **bidova.github.io**, enable the action `contact` and obtain its public site key and secret key.
+5. Configure Worker secrets (never commit values): `RESEND_API_KEY`, `TURNSTILE_SECRET_KEY`, `FROM_EMAIL`, and `CONTACT_RECIPIENT`.
 5. Add Cloudflare WAF/rate limit rules for the public contact API endpoint and verify spam protection. Turnstile and honeypot are supplemental protections.
 6. Deploy Worker to a separate public hostname only after explicit approval. Test OPTIONS/CORS, origin rejection, invalid content, CAPTCHA failure and successful message delivery.
-7. Confirm actual email arrives in **bidovasoftware@gmail.com** and clicking Reply addresses the sender. Verify recipient spam/junk folder behavior.
+7. Confirm actual email arrives in **the private owner inbox** and clicking Reply addresses the sender. Verify recipient spam/junk folder behavior.
 8. Configure `CONTACT_ENDPOINT` and `TURNSTILE_SITE_KEY` near the end of contact.html once the Worker is deployed and tested.
 9. Review site behavior on desktop and iPhone, check keyboard navigation and assistive text.
 10. Request explicit approval before merging website-v2-review into main or deploying any Worker.
