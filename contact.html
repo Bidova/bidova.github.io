@@ -45,7 +45,8 @@ header{position:sticky;top:0;z-index:20;background:#0a1421f2;border-bottom:1px s
 .field input:focus,.field select:focus,.field textarea:focus{border-color:#78cbff;box-shadow:0 0 0 3px #3199ef35}
 .field input::placeholder,.field textarea::placeholder{color:#95abc3}
 .field textarea{min-height:143px;resize:vertical}
-.required{color:#8bd2ff}.privacy{display:flex;align-items:flex-start;gap:10px;font-size:12px;color:#b8ccdf;line-height:1.6}
+.required{color:#8bd2ff}.trap-field{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.privacy{display:flex;align-items:flex-start;gap:10px;font-size:12px;color:#b8ccdf;line-height:1.6}
 .privacy input{flex:0 0 18px;width:18px;height:18px;margin-top:1px;accent-color:#2289ed}
 .submit{margin-top:23px;border:1px solid #399dfb;border-radius:9px;background:#1679e8;color:white;padding:13px 24px;min-width:190px;font-weight:800;cursor:pointer}
 .submit:hover:not(:disabled){background:#258ef5}.submit:disabled{cursor:not-allowed;opacity:.54}
@@ -92,6 +93,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #78
 <div class="field"><label for="contact-company">Company name</label><input id="contact-company" name="company" autocomplete="organization" type="text" maxlength="120" placeholder="Your construction company (optional)"></div>
 <div class="field"><label for="contact-topic">Reason for contacting <span class="required">*</span></label><select id="contact-topic" name="topic" required><option value="" disabled selected>Select a topic</option><option value="Request a Demo">Request a Demo</option><option value="Interested in Bidova">Interested in Bidova</option><option value="Technical Support">Technical Support</option><option value="Business Inquiry">Business Inquiry</option><option value="Other">Other</option></select></div>
 <div class="field"><label for="contact-message">Your message <span class="required">*</span></label><textarea id="contact-message" name="message" minlength="10" maxlength="2500" placeholder="Tell us what you'd like to know…" required></textarea></div>
+<div class="trap-field" aria-hidden="true"><label for="company-url">Website (leave empty)</label><input type="text" id="company-url" name="_gotcha" tabindex="-1" autocomplete="off"></div>
 <label class="privacy"><input id="contact-consent" name="consent" type="checkbox" value="I consent to being contacted in response to my inquiry" required><span>I agree to have my submitted information used to respond to my inquiry. Do not submit passwords, confidential bids or sensitive project documents. Messages are processed by our form service.</span></label>
 <button class="submit" id="contact-submit" type="submit" disabled>Send Message →</button>
 <p class="formstatus" id="contact-status" role="status" aria-live="polite">The secure form is awaiting final connection before accepting messages.</p>
