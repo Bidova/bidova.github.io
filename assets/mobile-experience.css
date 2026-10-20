@@ -1,0 +1,187 @@
+/*
+  Bidova mobile experience v1
+  Loaded with media="screen and (max-width: 1024px)" on each page.
+  Page-scoped CSS only: desktop layout, app screenshots and videos are untouched.
+*/
+@media screen and (max-width:1024px){
+  body.bidova-home,body.bidova-contact,body.bidova-handbook{
+    overflow-x:clip;
+    -webkit-text-size-adjust:100%;
+  }
+  body.bidova-home *,body.bidova-contact *,body.bidova-handbook *{min-width:0}
+  body.bidova-home a,body.bidova-home button,body.bidova-home summary,
+  body.bidova-contact a,body.bidova-contact button,body.bidova-contact summary,
+  body.bidova-handbook a,body.bidova-handbook button,body.bidova-handbook label{
+    -webkit-tap-highlight-color:rgba(110,194,255,.12);
+  }
+
+  /* Homepage: sticky navigation, comfortable touch targets, truly responsive grid. */
+  .bidova-home header{z-index:100}
+  .bidova-home .nav{height:68px;min-height:68px;gap:12px}
+  .bidova-home .links{display:none!important}
+  .bidova-home .mobile-nav{display:block!important;position:relative;margin-left:auto}
+  .bidova-home .mobile-nav summary{
+    min-width:48px;min-height:46px;display:flex;align-items:center;
+    justify-content:center;border:1px solid #45637d;background:#12273d;
+    border-radius:11px;font-size:22px;
+  }
+  .bidova-home .mobile-menu{
+    position:absolute;right:0;top:calc(100% + 10px);
+    width:min(340px,calc(100vw - 32px));min-width:0;
+    max-height:calc(100dvh - 93px);overflow-y:auto;overscroll-behavior:contain;
+    padding:9px;background:#10243a;border:1px solid #40607e;
+    border-radius:14px;box-shadow:0 22px 55px #000c;z-index:250;
+  }
+  .bidova-home .mobile-menu a{
+    min-height:46px;display:flex;align-items:center;padding:12px 15px;
+    border-radius:8px;font-size:14px;line-height:1.35;
+  }
+  .bidova-home .mobile-menu a+a{border-top:1px solid #203951}
+  .bidova-home .mobile-menu a[href="contact.html"]{
+    color:#f4faff;background:#116ccc;font-weight:800;margin-top:7px;
+  }
+  .bidova-home .hero-inner{
+    grid-template-columns:minmax(0,1fr)!important;
+    min-height:0;padding:48px 0 50px;gap:30px;
+  }
+  .bidova-home .hero h1{font-size:clamp(36px,6vw,54px);line-height:1.12}
+  .bidova-home .hero p{font-size:16px;line-height:1.65;margin-bottom:20px}
+  .bidova-home .hero .preview,.bidova-home .hero .hero-shot{
+    max-width:100%;min-width:0;width:100%;
+  }
+  .bidova-home .hero .hero-shot{
+    height:auto;aspect-ratio:16/9;object-fit:contain;
+    border-radius:12px;background:#071321;
+  }
+  .bidova-home .actions{gap:10px}
+  .bidova-home .actions .btn{min-height:48px}
+  .bidova-home .section{padding:65px 0}
+  .bidova-home .section h2{font-size:clamp(27px,4.8vw,38px);line-height:1.2}
+  .bidova-home .section-intro{font-size:15px;line-height:1.7}
+  .bidova-home .features,.bidova-home .info-grid,
+  .bidova-home .shot-grid,.bidova-home .video-grid,
+  .bidova-home .bidova-steps-grid,.bidova-home .bx-roadmap-grid{
+    grid-template-columns:minmax(0,1fr);gap:15px;
+  }
+  .bidova-home .feature,.bidova-home .info-card,
+  .bidova-home .bidova-steps-grid article,.bidova-home .bx-roadmap-card{
+    padding:23px;border-radius:13px;
+  }
+  .bidova-home .shot-grid{margin-top:23px}
+  .bidova-home .shot-card img{width:100%;max-width:100%;height:auto;aspect-ratio:1.8}
+  .bidova-home .bx-toolbar{
+    display:flex;flex-flow:row nowrap;overflow-x:auto;
+    gap:9px;margin:20px -4px 8px;padding:4px 4px 12px;
+    scrollbar-width:thin;scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+  }
+  .bidova-home .bx-toolbar .bx-tab{
+    flex:0 0 auto;min-width:max-content;min-height:46px;
+    scroll-snap-align:start;padding:11px 16px;white-space:nowrap;
+  }
+  .bidova-home .bx-notice{line-height:1.6}
+  .bidova-home .video-card{width:100%;min-width:0}
+  .bidova-home video.demo-video{height:auto;max-width:100%;aspect-ratio:16/9}
+  .bidova-home .split{grid-template-columns:1fr;gap:25px}
+  .bidova-home .cta-inner{flex-direction:column;align-items:flex-start}
+  .bidova-home .cta-inner .btn{min-height:46px}
+  .bidova-home .faq details{padding:19px 0}
+  .bidova-home .faq summary{min-height:42px;line-height:1.5}
+  .bidova-home .foot{flex-wrap:wrap;gap:14px;line-height:1.6}
+
+  /* Contact page: full-width form first; help cards go underneath. */
+  .bidova-contact .nav{min-height:68px}
+  .bidova-contact .links{display:none!important}
+  .bidova-contact .smallmenu{display:block;position:relative;margin-left:auto}
+  .bidova-contact .smallmenu summary{
+    display:flex;align-items:center;justify-content:center;
+    min-width:72px;min-height:46px;border:1px solid #4a6884;
+    background:#14283e;border-radius:10px;
+  }
+  .bidova-contact .smallmenu nav{
+    max-height:calc(100dvh - 93px);overflow-y:auto;z-index:250;
+    box-shadow:0 22px 55px #000b;
+  }
+  .bidova-contact .smallmenu nav a{min-height:46px;display:flex;align-items:center}
+  .bidova-contact .hero{padding:42px 0 38px}
+  .bidova-contact .hero h1{font-size:clamp(31px,5.2vw,46px)}
+  .bidova-contact .main{
+    grid-template-columns:minmax(0,1fr);gap:19px;padding:30px 0 66px;
+  }
+  .bidova-contact .panel{padding:26px;border-radius:14px}
+  .bidova-contact .side{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .bidova-contact .field input,.bidova-contact .field select,
+  .bidova-contact .field textarea{font-size:16px;min-height:48px}
+  .bidova-contact .submit{min-height:48px}
+  .bidova-contact .foot{line-height:1.6}
+
+  /* Handbook: move chapter directory into an optional mobile drawer. */
+  .bidova-handbook .top{
+    height:68px;min-height:68px;padding:0 18px;gap:12px;
+  }
+  .bidova-handbook .top .brand{font-size:17px;letter-spacing:.06em}
+  .bidova-handbook .top .back{font-size:12px;text-align:right}
+  .bidova-handbook .layout{display:flex;flex-direction:column}
+  .bidova-handbook .mobile-chapter-toggle{
+    display:block;position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;
+  }
+  .bidova-handbook .mobile-chapter-label{
+    display:flex;align-items:center;justify-content:space-between;
+    margin:14px 18px 0;padding:13px 16px;min-height:48px;
+    border-radius:10px;border:1px solid #3c6281;
+    background:#153047;color:#e8f5ff;font-size:14px;font-weight:800;
+    cursor:pointer;
+  }
+  .bidova-handbook .mobile-chapter-toggle:focus-visible+.mobile-chapter-label{
+    outline:3px solid #7bcfff;outline-offset:3px;
+  }
+  .bidova-handbook .sidebar{
+    display:none;position:relative;top:auto;height:auto;
+    max-height:min(55dvh,460px);overflow:auto;
+    border-right:0;border-bottom:1px solid #28435c;
+    padding:14px 18px 20px;
+  }
+  .bidova-handbook .mobile-chapter-toggle:checked~.sidebar{display:block}
+  .bidova-handbook .sidebar input{
+    font-size:16px;min-height:48px;
+  }
+  .bidova-handbook .sidebar a{min-height:43px;padding:10px 12px}
+  .bidova-handbook .content{padding:26px 22px 70px;max-width:100%}
+  .bidova-handbook .intro h1{font-size:clamp(32px,5.7vw,48px);line-height:1.15}
+  .bidova-handbook .intro p{font-size:15px;line-height:1.7}
+  .bidova-handbook .meta{margin:23px 0 30px;gap:8px}
+  .bidova-handbook .pill{font-size:11px}
+  .bidova-handbook .chapter{padding:30px 0;scroll-margin-top:86px}
+  .bidova-handbook .chapter h2{font-size:clamp(25px,4vw,30px)}
+  .bidova-handbook .step{padding:16px 14px;gap:11px}
+}
+@media screen and (max-width:600px){
+  .bidova-home .wrap,.bidova-contact .wrap{width:calc(100% - 32px)}
+  .bidova-home .brand{font-size:18px}
+  .bidova-home .hero-inner{padding:39px 0 40px;gap:24px}
+  .bidova-home .hero h1{font-size:clamp(35px,9vw,43px)}
+  .bidova-home .hero p{font-size:15px}
+  .bidova-home .actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .bidova-home .actions .btn{width:100%;justify-content:center;font-size:14px}
+  .bidova-home .section{padding:49px 0}
+  .bidova-home .feature,.bidova-home .info-card,
+  .bidova-home .bidova-steps-grid article,.bidova-home .bx-roadmap-card{padding:20px}
+  .bidova-home .shot-card figcaption{padding:15px}
+  .bidova-home .shot-caption{font-size:9px}
+  .bidova-home .cta{padding:52px 0}
+  .bidova-home .foot{flex-direction:column;align-items:flex-start}
+  .bidova-contact .hero{padding:35px 0 31px}
+  .bidova-contact .hero h1{font-size:34px}
+  .bidova-contact .hero p{font-size:14px}
+  .bidova-contact .panel{padding:21px}
+  .bidova-contact .fields,.bidova-contact .side{grid-template-columns:minmax(0,1fr)}
+  .bidova-contact .submit{width:100%}
+  .bidova-handbook .top .brand{font-size:15px;gap:7px}
+  .bidova-handbook .top .brand img{width:29px;height:29px}
+  .bidova-handbook .top .back{font-size:11px}
+  .bidova-handbook .content{padding:23px 18px 62px}
+  .bidova-handbook .step{grid-template-columns:30px 1fr}
+}
+@media screen and (max-width:370px){
+  .bidova-handbook .top .brand span{display:none}
+}
