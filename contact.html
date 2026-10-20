@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#08111d">
-<meta name="description" content="Contact Bidova about construction estimating software, product demonstrations, and support.">
+<meta name="description" content="Bidova software contact information and the upcoming private inquiry form.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://bidova.github.io/contact.html">
 <title>Contact Bidova | Construction Estimating Software</title>
@@ -28,56 +28,21 @@ a:focus-visible,button:focus-visible{outline:3px solid #75c7ff;outline-offset:3p
 <body>
 <header><div class="wrap nav"><a class="brand" href="index.html" aria-label="Bidova homepage"><img src="assets/bidova-logo.webp" alt="" class="brand-logo">BIDOVA</a><nav class="links" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="index.html#platform">The Software</a><a href="index.html#video-demos">Watch Demo</a><a href="handbook.html">Handbook</a><a class="outline-btn" href="index.html">← Back to site</a></nav></div></header>
 <main>
-<section class="intro"><div class="wrap"><div class="kicker">CONTACT BIDOVA</div><h1>Let's talk <span>construction software.</span></h1><p>Interested in Bidova, have a question, or want to request a demonstration? Tell us a little about your company and we'll follow up.</p></div></section>
+<section class="intro"><div class="wrap"><div class="kicker">CONTACT BIDOVA</div><h1>Let's talk <span>construction software.</span></h1><p>Have a question about Bidova or want to request a demonstration? Our private contact form is being prepared.</p></div></section>
 <div class="wrap main-grid">
-<section class="panel" aria-labelledby="contact-heading"><h2 id="contact-heading">Send us a message.</h2><p>Fill out the details below. Fields marked <span class="required">*</span> are required.</p>
-<form id="contact-form" novalidate>
-<div class="fields">
-<div class="field"><label for="full-name">Full name <span class="required">*</span></label><input id="full-name" name="name" type="text" autocomplete="name" placeholder="Your full name" minlength="2" maxlength="100" required></div>
-<div class="field"><label for="email">Email address <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@company.com" required></div>
-</div>
-<div class="field"><label for="company">Company name</label><input id="company" name="company" type="text" autocomplete="organization" maxlength="120" placeholder="Your construction company (optional)"></div>
-<div class="field"><label for="reason">What can we help with? <span class="required">*</span></label><select id="reason" name="topic" required><option value="" disabled selected>Select a topic</option><option value="demo">Request a Demo</option><option value="software">Interested in Bidova</option><option value="support">Technical Support</option><option value="business">Business Inquiry</option><option value="other">Other</option></select></div>
-<div class="field"><label for="message">Your message <span class="required">*</span></label><textarea id="message" name="message" placeholder="Tell us what you'd like to know about Bidova..." minlength="10" maxlength="2500" required></textarea></div>
-<div class="honeypot" aria-hidden="true"><label for="company-site">Leave this field empty</label><input name="website" type="text" id="company-site" tabindex="-1" autocomplete="off"></div>
-
-<label class="consent"><input id="consent" type="checkbox" required><span>I agree that Bidova may use the information I submit to respond to my inquiry. Please don't include passwords, confidential bid files, or sensitive information.</span></label>
-<button class="send" id="send-button" type="submit">Open email to send →</button>
-<p id="form-status" class="form-status" role="status" aria-live="polite">When you click the button, your email app opens with your message. Please press Send there to deliver it.</p>
-</form>
+<section class="panel" aria-labelledby="contact-heading">
+<div class="smalltag">PRIVATE CONTACT FORM</div>
+<h2 id="contact-heading">We're preparing a safer way to get in touch.</h2>
+<p>Our secure contact form is being connected. Online inquiries and demo requests are temporarily unavailable while we finish setup and testing.</p>
+<p class="aux">When it's ready, you'll be able to send your name, company, email, and message directly through this page without a public email address.</p>
+<a class="outline-btn" href="index.html#platform">Explore the Bidova software →</a>
 </section>
 <aside class="info" aria-label="Contact information">
-<div class="panel"><div class="smalltag">DIRECT EMAIL</div><h3>Reach Bidova</h3><p><a href="mailto:bidovasoftware@gmail.com?subject=Bidova%20Website%20Inquiry">bidovasoftware@gmail.com</a></p><p style="margin-top:13px">You can also email us directly. Automatic website submissions are being prepared.</p></div>
-<div class="panel"><div class="smalltag">HOW IT WORKS</div><h3>What happens next?</h3><ol class="steps"><li>Enter your details and open a prefilled email.</li><li>Send the email from your mail app to our business address.</li><li>We reply directly to the email you provide.</li></ol></div>
-<div class="panel"><div class="smalltag">PRODUCT INFORMATION</div><h3>Learn more first?</h3><p>Explore the <a href="index.html#platform">software screenshots</a>, <a href="index.html#video-demos">watch demonstrations</a>, or read the <a href="handbook.html">product handbook</a>.</p></div>
+<div class="panel"><div class="smalltag">CONTACT STATUS</div><h3>Secure form coming soon</h3><p>We're preparing private email delivery and spam protection before accepting messages.</p></div>
+<div class="panel"><div class="smalltag">PRODUCT INFORMATION</div><h3>Learn about Bidova</h3><p>Explore <a href="index.html#platform">software screenshots</a>, <a href="index.html#video-demos">product demonstrations</a>, or the <a href="handbook.html">product handbook</a>.</p></div>
 </aside>
 </div>
 </main>
 <footer><div class="wrap foot"><strong>BIDOVA</strong><span>Construction estimating &amp; bid management · © 2026 Bidova</span><nav aria-label="Footer links"><a href="index.html">Home</a><a href="handbook.html">Handbook</a><a href="contact.html" aria-current="page">Contact</a></nav></div></footer>
-<script>
-(function(){
- const form=document.getElementById('contact-form');
- const status=document.getElementById('form-status');
- const reason=document.getElementById('reason');
- const topic=new URLSearchParams(window.location.search).get('topic');
- if(['demo','software','support','business','other'].includes(topic))reason.value=topic;
- const labels={demo:'Request a Demo',software:'Interested in Bidova',support:'Technical Support',business:'Business Inquiry',other:'Other'};
- form.addEventListener('submit',function(event){
-   event.preventDefault();
-   if(!form.reportValidity())return;
-   const data=new FormData(form);
-   const topic=String(data.get('topic')||'other');
-   const name=String(data.get('name')||'').trim();
-   const email=String(data.get('email')||'').trim();
-   const company=String(data.get('company')||'').trim();
-   const message=String(data.get('message')||'').trim();
-   const body=['Bidova website inquiry','', 'Name: '+name,'Email: '+email,
-      'Company: '+(company||'(not provided)'),'Topic: '+(labels[topic]||'Other'),'', 'Message:',message].join('\n');
-   const subject='Bidova inquiry — '+(labels[topic]||'Other');
-   // Mailto starts a draft in the visitor's email app; the visitor must press Send.
-   window.location.href='mailto:bidovasoftware@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-   status.textContent='Your email app should open with your message. Press Send there to deliver it. If nothing opens, use the direct email link.';
- });
-})();
-</script>
+
 </body></html>
