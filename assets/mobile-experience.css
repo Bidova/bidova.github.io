@@ -44,7 +44,8 @@
     grid-template-columns:minmax(0,1fr)!important;
     min-height:0;padding:48px 0 50px;gap:30px;
   }
-  .bidova-home .hero h1{font-size:clamp(36px,6vw,54px);line-height:1.12}
+  .bidova-home .hero h1{font-size:clamp(36px,6vw,54px);line-height:1.2;letter-spacing:-.035em}
+  .bidova-home .hero h1 span{display:block;margin-top:7px;letter-spacing:-.02em}
   .bidova-home .hero p{font-size:16px;line-height:1.65;margin-bottom:20px}
   .bidova-home .hero .preview,.bidova-home .hero .hero-shot{
     max-width:100%;min-width:0;width:100%;
@@ -159,7 +160,7 @@
   .bidova-home .wrap,.bidova-contact .wrap{width:calc(100% - 32px)}
   .bidova-home .brand{font-size:18px}
   .bidova-home .hero-inner{padding:39px 0 40px;gap:24px}
-  .bidova-home .hero h1{font-size:clamp(35px,9vw,43px)}
+  .bidova-home .hero h1{font-size:clamp(33px,8.5vw,41px)}
   .bidova-home .hero p{font-size:15px}
   .bidova-home .actions{display:grid;grid-template-columns:1fr;gap:10px}
   .bidova-home .actions .btn{width:100%;justify-content:center;font-size:14px}
