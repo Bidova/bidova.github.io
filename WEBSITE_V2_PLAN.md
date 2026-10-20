@@ -46,3 +46,13 @@ Ownership verification currently succeeds. Public indexing work is on pause at o
 
 ## Owner decision — 2026-10-20: preserve existing original website
 The previous alternate V2 mockup is NOT the design target. Keep the existing main-branch index.html's branding, layout, genuine media, navigational behavior and features as baseline. Improve it incrementally rather than replacing it. All changes remain on website-v2-review until explicitly approved. The website-v2-preview.html is an abandoned exploratory concept and must not replace index.html. For admin work, continue separately on admin-v2-review without deploying.
+
+## Contact Us milestone (2026-10-20)
+- Added contact.html matching the existing dark Bidova website, not the alternate redesign.
+- Added Contact links in desktop/mobile navigation and footer, plus a Request a Demo homepage CTA.
+- Inquiry fields: name, email, optional company, reason, message; recipient is bidovasoftware@gmail.com.
+- Designed a public, separate contact-worker API with validation, Turnstile site verification, honeypot, CORS and Resend email delivery with Reply-To.
+- **No API has been deployed, no email delivery has been connected or tested, and the website main branch has not been updated.** Send button remains disabled intentionally.
+- A third-party service account, verified sender identity/domain, Turnstile credentials, public endpoint, rate limits and end-to-end test are required to activate automatic delivery.
+- Direct mailto fallback remains available even if the online submission feature is not ready.
+- Do not merge or publish until the owner approves and email submission is verified.
