@@ -28,6 +28,15 @@ body{background:#090f19;color:#eaf2fd}header{background:#0a1421f5;border-color:#
 #download .cta-inner{align-items:center}
 #download .cta-inner>div{max-width:750px}
 @media(max-width:760px){.info-grid{grid-template-columns:1fr}.info-card{padding:23px}}
+
+/* Interactive screenshot showcase: existing gallery and palette preserved */
+#bidova-image-viewer .showcase-prev,#bidova-image-viewer .showcase-next{position:absolute;top:48%;transform:translateY(-50%);z-index:5;background:rgba(16,42,65,.91);border:1px solid #598bb3;border-radius:50%;width:48px;height:48px;color:#fff;font-size:25px;cursor:pointer;display:none;align-items:center;justify-content:center}
+#bidova-image-viewer.is-open .showcase-prev,#bidova-image-viewer.is-open .showcase-next{display:flex}
+#bidova-image-viewer .showcase-prev{left:clamp(8px,3vw,38px)}#bidova-image-viewer .showcase-next{right:clamp(8px,3vw,38px)}
+#bidova-image-viewer .showcase-info{position:absolute;bottom:clamp(12px,3vh,36px);left:50%;transform:translateX(-50%);width:min(680px,calc(100% - 130px));padding:13px 20px;background:rgba(8,25,42,.94);border:1px solid rgba(121,190,236,.35);border-radius:12px;display:none;text-align:center;color:#e9f6ff;z-index:4}
+#bidova-image-viewer.is-open .showcase-info{display:flex;flex-direction:column;gap:4px}
+#bidova-image-viewer .showcase-info span{color:#c3d6e5;font-size:13px;line-height:1.35}#bidova-image-viewer .showcase-info #showcase-count{color:#8ecbfa;font-size:12px}
+@media(max-width:700px){#bidova-image-viewer .showcase-prev,#bidova-image-viewer .showcase-next{width:38px;height:38px;font-size:20px}#bidova-image-viewer .showcase-info{width:calc(100% - 34px);bottom:12px;padding:9px 12px}}
 </style><style>
 .hero-shot{display:block;width:100%;border:1px solid #35516d;border-radius:13px;box-shadow:0 26px 70px #0009;object-fit:contain;transition:transform .2s}.preview a:hover .hero-shot{transform:translateY(-4px)}.shot-caption{display:flex;justify-content:space-between;align-items:center;color:#b6cce3;font-size:10px;letter-spacing:.13em;font-weight:800;margin-top:14px}.gallery-section{background:#0b1727}.shot-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}.shot-card{margin:0;background:#122238;border:1px solid #2b425d;border-radius:14px;overflow:hidden;transition:transform .2s,border-color .2s}.shot-card:hover{transform:translateY(-4px);border-color:#479ce7}.shot-card a{display:block;background:#06101c}.shot-card img{display:block;width:100%;aspect-ratio:1.9;object-fit:contain}.shot-card figcaption{padding:20px 22px;display:grid;gap:7px}.shot-card strong{color:#eff7ff;font-size:17px}.shot-card span{color:#afc3da;font-size:13px;line-height:1.6}.gallery-note{color:#859cb6;font-size:12px;margin-top:24px;line-height:1.6}@media(max-width:700px){.shot-grid{grid-template-columns:1fr;gap:16px}.shot-card figcaption{padding:16px}.shot-card img{aspect-ratio:1.85}}
 </style><style>
@@ -127,18 +136,33 @@ body.preview-open{overflow:hidden}
 </div></div></section><section class="section info-section alt" id="support"><div class="wrap"><div class="kicker">HELP &amp; SUPPORT</div><h2>Answers when you need them.</h2><p class="section-intro">Start with the full handbook for step-by-step instructions. If something behaves unexpectedly, capture the relevant details before changing job folders or reinstalling.</p><div class="info-grid">
 <article class="info-card"><div class="mini">PRODUCT GUIDE</div><h3>Bidova Handbook</h3><p>Browse the User and Manager guides, including Job Center, New Bid, Bulk Intake, Compare, History, and troubleshooting.</p><a class="btn" href="handbook.html">Open the handbook →</a></article>
 <article class="info-card"><div class="mini">TROUBLESHOOTING</div><h3>Prepare a useful issue report</h3><p>Note your Bidova version, the screen where the problem occurred, the exact error message and steps to reproduce it. Authorized admins can use Manager diagnostics and support exports where appropriate.</p><p class="muted">Remove customer names, bid values, credentials and other sensitive details before sharing screenshots or logs. A public support contact has not been announced.</p></article>
-</div></div></section><section class="cta" id="download"><div class="wrap cta-inner"><div><div class="eyebrow">RELEASE STATUS · IN DEVELOPMENT</div><h2>Bidova for Windows.</h2><p>The public installer is not available yet. We are completing software testing and release preparation. When an approved installer is ready, this section will provide the download and verified requirements.</p></div><a class="btn" href="handbook.html">Read the handbook →</a></div></section><section class="section" id="questions"><div class="wrap faq"><div class="kicker">FAQ</div><h2>Good to know.</h2><details><summary>What is Bidova?</summary><p>Bidova is a Windows desktop application focused on construction estimating, bid management, and project organization.</p></details><details><summary>Can I download Bidova today?</summary><p>A public installer has not been released yet. This website will be updated when an approved Windows installer is available.</p></details><details><summary>Is Bidova a web application?</summary><p>No. The product is designed as Windows desktop software. This website provides product information and future download access.</p></details><details><summary>What is Bidova Manager?</summary><p>Bidova Manager is a separate management application intended for authorized use. It is not offered as a public download here.</p></details></div></section></main><footer><div class="wrap foot"><strong>BIDOVA</strong><span>Construction estimating &amp; bid management · © 2026 Bidova</span><a href="#requirements">System requirements</a><a href="#questions">FAQ</a></div></footer><div aria-label="Software image preview" aria-modal="true" id="bidova-image-viewer" role="dialog"><button aria-label="Close preview" class="close-preview" type="button">✕ Close</button><img alt="Enlarged Bidova software image"/></div><script>
+</div></div></section><section class="cta" id="download"><div class="wrap cta-inner"><div><div class="eyebrow">RELEASE STATUS · IN DEVELOPMENT</div><h2>Bidova for Windows.</h2><p>The public installer is not available yet. We are completing software testing and release preparation. When an approved installer is ready, this section will provide the download and verified requirements.</p></div><a class="btn" href="handbook.html">Read the handbook →</a></div></section><section class="section" id="questions"><div class="wrap faq"><div class="kicker">FAQ</div><h2>Good to know.</h2><details><summary>What is Bidova?</summary><p>Bidova is a Windows desktop application focused on construction estimating, bid management, and project organization.</p></details><details><summary>Can I download Bidova today?</summary><p>A public installer has not been released yet. This website will be updated when an approved Windows installer is available.</p></details><details><summary>Is Bidova a web application?</summary><p>No. The product is designed as Windows desktop software. This website provides product information and future download access.</p></details><details><summary>What is Bidova Manager?</summary><p>Bidova Manager is a separate management application intended for authorized use. It is not offered as a public download here.</p></details></div></section></main><footer><div class="wrap foot"><strong>BIDOVA</strong><span>Construction estimating &amp; bid management · © 2026 Bidova</span><a href="#requirements">System requirements</a><a href="#questions">FAQ</a></div></footer><div aria-label="Software image preview" aria-modal="true" id="bidova-image-viewer" role="dialog"><button aria-label="Close preview" class="close-preview" type="button">✕ Close</button><button type="button" class="showcase-prev" aria-label="Previous screenshot">❮</button><img alt="Enlarged Bidova software image"/><button type="button" class="showcase-next" aria-label="Next screenshot">❯</button><div class="showcase-info" aria-live="polite"><strong id="showcase-title"></strong><span id="showcase-desc"></span><span id="showcase-count"></span></div></div><script>
 (function(){
  const viewer=document.getElementById('bidova-image-viewer');
  const full=viewer.querySelector('img');
- const close=viewer.querySelector('button');
- let previous=null;
- function hide(){viewer.classList.remove('is-open');document.body.classList.remove('preview-open');full.removeAttribute('src');if(previous)previous.focus();}
- document.querySelectorAll('a[data-preview="true"]').forEach(function(link){
-  link.addEventListener('click',function(event){event.preventDefault();const img=link.querySelector('img');if(!img)return;previous=link;full.src=img.currentSrc||img.src;full.alt=img.alt;viewer.classList.add('is-open');document.body.classList.add('preview-open');close.focus();});
- });
+ const close=viewer.querySelector('.close-preview');
+ const prev=viewer.querySelector('.showcase-prev');
+ const next=viewer.querySelector('.showcase-next');
+ const title=viewer.querySelector('#showcase-title');
+ const desc=viewer.querySelector('#showcase-desc');
+ const count=viewer.querySelector('#showcase-count');
+ const items=Array.from(document.querySelectorAll('.shot-grid a[data-preview="true"]'));
+ let previous=null,index=0;
+ function render(){
+  const link=items[index];if(!link)return;
+  const img=link.querySelector('img');const caption=link.closest('figure')?.querySelector('figcaption');
+  full.src=img.currentSrc||img.src;full.alt=img.alt;
+  title.textContent=caption?.querySelector('strong')?.textContent||'Bidova screenshot';
+  desc.textContent=caption?.querySelector('span')?.textContent||img.alt;
+  count.textContent=(index+1)+' of '+items.length;
+ }
+ function show(i){if(!items.length)return;index=(i+items.length)%items.length;render()}
+ function hide(){viewer.classList.remove('is-open');document.body.classList.remove('preview-open');full.removeAttribute('src');if(previous)previous.focus()}
+ items.forEach(function(link,i){link.addEventListener('click',function(event){event.preventDefault();previous=link;show(i);viewer.classList.add('is-open');document.body.classList.add('preview-open');close.focus()})});
+ prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));
  close.addEventListener('click',hide);
- viewer.addEventListener('click',function(e){if(e.target===viewer)hide();});
- document.addEventListener('keydown',function(e){if(e.key==='Escape'&&viewer.classList.contains('is-open'))hide();});
+ viewer.addEventListener('click',function(e){if(e.target===viewer)hide()});
+ document.addEventListener('keydown',function(e){if(!viewer.classList.contains('is-open'))return;if(e.key==='Escape'){hide()}else if(e.key==='ArrowLeft'){e.preventDefault();show(index-1)}else if(e.key==='ArrowRight'){e.preventDefault();show(index+1)}});
+ let touchX=null;viewer.addEventListener('touchstart',e=>{touchX=e.touches[0]?.clientX??null},{passive:true});viewer.addEventListener('touchend',e=>{if(touchX===null)return;const diff=(e.changedTouches[0]?.clientX??touchX)-touchX;if(Math.abs(diff)>65)show(index+(diff<0?1:-1));touchX=null},{passive:true});
 })();
 </script><!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"a501f270886a400c8ad58f8acbd10a0b"}'></script><!-- End Cloudflare Web Analytics --></body></html>
