@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#08111d">
-<meta name="description" content="Contact Bidova about construction estimating software, product demonstrations, and support.">
+<meta name="description" content="Bidova software contact information and the upcoming private inquiry form.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://bidova.github.io/contact.html">
 <title>Contact Bidova | Construction Estimating Software</title>
@@ -28,67 +28,21 @@ a:focus-visible,button:focus-visible{outline:3px solid #75c7ff;outline-offset:3p
 <body>
 <header><div class="wrap nav"><a class="brand" href="index.html" aria-label="Bidova homepage"><img src="assets/bidova-logo.webp" alt="" class="brand-logo">BIDOVA</a><nav class="links" aria-label="Main navigation"><a href="index.html#features">Features</a><a href="index.html#platform">The Software</a><a href="index.html#video-demos">Watch Demo</a><a href="handbook.html">Handbook</a><a class="outline-btn" href="index.html">← Back to site</a></nav></div></header>
 <main>
-<section class="intro"><div class="wrap"><div class="kicker">CONTACT BIDOVA</div><h1>Let's talk <span>construction software.</span></h1><p>Interested in Bidova, have a question, or want to request a demonstration? Tell us a little about your company and we'll follow up.</p></div></section>
+<section class="intro"><div class="wrap"><div class="kicker">CONTACT BIDOVA</div><h1>Let's talk <span>construction software.</span></h1><p>Have a question about Bidova or want to request a demonstration? Our private contact form is being prepared.</p></div></section>
 <div class="wrap main-grid">
-<section class="panel" aria-labelledby="contact-heading"><h2 id="contact-heading">Send us a message.</h2><p>Fill out the details below. Fields marked <span class="required">*</span> are required.</p>
-<form id="contact-form" novalidate>
-<div class="fields">
-<div class="field"><label for="full-name">Full name <span class="required">*</span></label><input id="full-name" name="name" type="text" autocomplete="name" placeholder="Your full name" minlength="2" maxlength="100" required></div>
-<div class="field"><label for="email">Email address <span class="required">*</span></label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="you@company.com" required></div>
-</div>
-<div class="field"><label for="company">Company name</label><input id="company" name="company" type="text" autocomplete="organization" maxlength="120" placeholder="Your construction company (optional)"></div>
-<div class="field"><label for="reason">What can we help with? <span class="required">*</span></label><select id="reason" name="topic" required><option value="" disabled selected>Select a topic</option><option value="demo">Request a Demo</option><option value="software">Interested in Bidova</option><option value="support">Technical Support</option><option value="business">Business Inquiry</option><option value="other">Other</option></select></div>
-<div class="field"><label for="message">Your message <span class="required">*</span></label><textarea id="message" name="message" placeholder="Tell us what you'd like to know about Bidova..." minlength="10" maxlength="2500" required></textarea></div>
-<div class="honeypot" aria-hidden="true"><label for="company-site">Leave this field empty</label><input name="website" type="text" id="company-site" tabindex="-1" autocomplete="off"></div>
-<div id="captcha-mount" aria-label="Spam verification"></div>
-<label class="consent"><input id="consent" type="checkbox" required><span>I agree that Bidova may use the information I submit to respond to my inquiry. Please don't include passwords, confidential bid files, or sensitive information.</span></label>
-<button class="send" id="send-button" type="submit" disabled>Send message →</button>
-<p id="form-status" class="form-status" role="status" aria-live="polite">Online submissions are not enabled yet. You can still contact us by email below.</p>
-</form>
+<section class="panel" aria-labelledby="contact-heading">
+<div class="smalltag">PRIVATE CONTACT FORM</div>
+<h2 id="contact-heading">We're preparing a safer way to get in touch.</h2>
+<p>Our secure contact form is being connected. Online inquiries and demo requests are temporarily unavailable while we finish setup and testing.</p>
+<p class="aux">When it's ready, you'll be able to send your name, company, email, and message directly through this page without a public email address.</p>
+<a class="outline-btn" href="index.html#platform">Explore the Bidova software →</a>
 </section>
 <aside class="info" aria-label="Contact information">
-<div class="panel"><div class="smalltag">DIRECT EMAIL</div><h3>Reach Bidova</h3><p><a href="mailto:bidovasoftware@gmail.com?subject=Bidova%20Website%20Inquiry">bidovasoftware@gmail.com</a></p><p style="margin-top:13px">Use the email link while we finish connecting the online contact form.</p></div>
-<div class="panel"><div class="smalltag">HOW IT WORKS</div><h3>What happens next?</h3><ol class="steps"><li>Send us your contact information and message.</li><li>Bidova receives the inquiry at our business email address.</li><li>We reply directly to the email you provide.</li></ol></div>
-<div class="panel"><div class="smalltag">PRODUCT INFORMATION</div><h3>Learn more first?</h3><p>Explore the <a href="index.html#platform">software screenshots</a>, <a href="index.html#video-demos">watch demonstrations</a>, or read the <a href="handbook.html">product handbook</a>.</p></div>
+<div class="panel"><div class="smalltag">CONTACT STATUS</div><h3>Secure form coming soon</h3><p>We're preparing private email delivery and spam protection before accepting messages.</p></div>
+<div class="panel"><div class="smalltag">PRODUCT INFORMATION</div><h3>Learn about Bidova</h3><p>Explore <a href="index.html#platform">software screenshots</a>, <a href="index.html#video-demos">product demonstrations</a>, or the <a href="handbook.html">product handbook</a>.</p></div>
 </aside>
 </div>
 </main>
 <footer><div class="wrap foot"><strong>BIDOVA</strong><span>Construction estimating &amp; bid management · © 2026 Bidova</span><nav aria-label="Footer links"><a href="index.html">Home</a><a href="handbook.html">Handbook</a><a href="contact.html" aria-current="page">Contact</a></nav></div></footer>
-<script>
-// Until the form delivery worker and Turnstile site key are configured,
-// leave these blank. A disabled button is intentional: no fake successes.
-const CONTACT_ENDPOINT='';
-const TURNSTILE_SITE_KEY='';
-const form=document.getElementById('contact-form');
-const button=document.getElementById('send-button');
-const status=document.getElementById('form-status');
-const topic=new URLSearchParams(location.search).get('topic');
-if(['demo','software','support','business','other'].includes(topic))document.getElementById('reason').value=topic;
-let captchaToken='';
-function setStatus(message,isError=false){status.textContent=message;status.classList.toggle('error',isError)}
-function activateForm(){
- if(!CONTACT_ENDPOINT||!TURNSTILE_SITE_KEY){setStatus('Online submissions are not enabled yet. Please use the direct email link on this page.');return;}
- const script=document.createElement('script');script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';script.async=true;
- script.onload=()=>{window.turnstile.render('#captcha-mount',{sitekey:TURNSTILE_SITE_KEY,action:'contact',theme:'dark',callback(token){captchaToken=token},'expired-callback'(){captchaToken=''}});button.disabled=false;setStatus('Ready to send securely.')};
- script.onerror=()=>setStatus('Spam verification failed to load. Please use the email link.',true);
- document.head.append(script);
-}
-form.addEventListener('submit',async event=>{
- event.preventDefault();
- if(!CONTACT_ENDPOINT||!TURNSTILE_SITE_KEY){setStatus('Email delivery is being configured. Please contact us using the email link.',true);return;}
- if(!form.reportValidity())return;
- if(!captchaToken){setStatus('Please complete the spam verification.',true);return;}
- button.disabled=true;setStatus('Sending your message…');
- const fields=new FormData(form);
- const payload={name:String(fields.get('name')||''),email:String(fields.get('email')||''),company:String(fields.get('company')||''),topic:String(fields.get('topic')||''),message:String(fields.get('message')||''),website:String(fields.get('website')||''),turnstileToken:captchaToken};
- try{
- const response=await fetch(CONTACT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
- const data=await response.json().catch(()=>({}));
- if(!response.ok||!data.ok)throw new Error(data.message||'Your message could not be sent.');
- form.reset();captchaToken='';window.turnstile?.reset();setStatus('Thanks! Your message was accepted for delivery. We can reply to the email address you entered.');
- }catch(error){setStatus('Could not send: '+(error.message||'Please try again or use the direct email link.'),true)}
- finally{button.disabled=false}
-});
-activateForm();
-</script>
+
 </body></html>
