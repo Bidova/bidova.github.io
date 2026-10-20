@@ -50,7 +50,7 @@ The previous alternate V2 mockup is NOT the design target. Keep the existing mai
 ## Contact Us milestone (2026-10-20)
 - Added contact.html matching the existing dark Bidova website, not the alternate redesign.
 - Added Contact links in desktop/mobile navigation and footer, plus a Request a Demo homepage CTA.
-- Inquiry fields: name, email, optional company, reason, message; recipient is bidovasoftware@gmail.com.
+- Inquiry fields: name, email, optional company, reason, message; recipient is the private owner inbox.
 - Designed a public, separate contact-worker API with validation, Turnstile site verification, honeypot, CORS and Resend email delivery with Reply-To.
 - **No API has been deployed, no email delivery has been connected or tested, and the website main branch has not been updated.** Send button remains disabled intentionally.
 - A third-party service account, verified sender identity/domain, Turnstile credentials, public endpoint, rate limits and end-to-end test are required to activate automatic delivery.
