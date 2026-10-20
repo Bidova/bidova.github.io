@@ -143,9 +143,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #78
         body:new FormData(form)
       });
       const result=await response.json().catch(()=>({}));
-      if(!response.ok||result.ok===false){
+      if(response.status===429)throw new Error('Too many requests. Please wait a few minutes and try again.');
+      if(!response.ok||result.ok!==true){
         const issue=Array.isArray(result.errors)?result.errors.map(e=>e.message).filter(Boolean).join(' '):'';
-        throw new Error(issue||'Your message could not be sent. Please try again.');
+        throw new Error(issue||'Your message could not be confirmed as sent. Please try again.');
       }
       form.reset();
       message('Thank you! Your message was submitted successfully. We will respond by email.','success');
