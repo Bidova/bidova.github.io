@@ -43,3 +43,6 @@ F. Merge to main only after explicit approval.
 
 ## Notes on Search Console
 Ownership verification currently succeeds. Public indexing work is on pause at owner's request. Do not undo those assets.
+
+## Owner decision — 2026-10-20: preserve existing original website
+The previous alternate V2 mockup is NOT the design target. Keep the existing main-branch index.html's branding, layout, genuine media, navigational behavior and features as baseline. Improve it incrementally rather than replacing it. All changes remain on website-v2-review until explicitly approved. The website-v2-preview.html is an abandoned exploratory concept and must not replace index.html. For admin work, continue separately on admin-v2-review without deploying.
