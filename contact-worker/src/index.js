@@ -1,6 +1,6 @@
 // Bidova public contact intake. Does not grant any website admin access.
 const ALLOWED_ORIGIN = 'https://bidova.github.io';
-const RECIPIENT = 'bidovasoftware@gmail.com';
+// Recipient is injected as a private Worker environment secret, never in source code.
 const TOPICS = Object.freeze({
   demo: 'Request a Demo',
   software: 'Interested in Bidova',
@@ -43,6 +43,7 @@ function validEmail(value) {
 }
 export default {
   async fetch(request,env) {
+    const RECIPIENT = env.CONTACT_RECIPIENT;
     const origin=request.headers.get('Origin')||'';
     if(origin!==ALLOWED_ORIGIN)return reply({ok:false,message:'Origin not authorized'},403);
     if(request.method==='OPTIONS')return new Response(null,{status:204,headers:cors(origin)});
@@ -51,7 +52,7 @@ export default {
       return reply({ok:false,message:'JSON required'},415,origin);
     const length=Number(request.headers.get('Content-Length')||0);
     if(length>7000)return reply({ok:false,message:'Request too large'},413,origin);
-    if(!env.RESEND_API_KEY||!env.TURNSTILE_SECRET_KEY||!env.FROM_EMAIL)
+    if(!env.RESEND_API_KEY||!env.TURNSTILE_SECRET_KEY||!env.FROM_EMAIL||!validEmail(RECIPIENT))
       return reply({ok:false,message:'Contact service is not configured. Please email us directly.'},503,origin);
     let body;
     try {
