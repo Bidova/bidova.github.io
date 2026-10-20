@@ -21,10 +21,11 @@
   .bidova-home .links{display:none!important}
   .bidova-home .mobile-nav{display:block!important;position:relative;margin-left:auto}
   .bidova-home .mobile-nav summary{
-    min-width:48px;min-height:46px;display:flex;align-items:center;
-    justify-content:center;border:1px solid #45637d;background:#12273d;
-    border-radius:11px;font-size:22px;
+    min-width:85px;min-height:46px;display:flex;align-items:center;
+    justify-content:center;gap:8px;padding:8px 13px;border:1px solid #45637d;background:#12273d;
+    border-radius:11px;font-size:14px;font-weight:800;
   }
+  .bidova-home .mobile-nav summary span{font-size:21px;line-height:1}
   .bidova-home .mobile-menu{
     position:absolute;right:0;top:calc(100% + 10px);
     width:min(340px,calc(100vw - 32px));min-width:0;
@@ -56,6 +57,8 @@
   }
   .bidova-home .actions{gap:10px}
   .bidova-home .actions .btn{min-height:48px}
+  /* Two focused hero choices on mobile. The handbook remains in Menu and Support. */
+  .bidova-home .hero .actions a[href="handbook.html"]{display:none}
   .bidova-home .section{padding:65px 0}
   .bidova-home .section h2{font-size:clamp(27px,4.8vw,38px);line-height:1.2}
   .bidova-home .section-intro{font-size:15px;line-height:1.7}
