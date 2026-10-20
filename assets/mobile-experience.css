@@ -123,7 +123,7 @@
   .bidova-handbook .top .back{font-size:12px;text-align:right}
   .bidova-handbook .layout{display:flex;flex-direction:column}
   .bidova-handbook .mobile-chapter-toggle{
-    position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;
+    display:block;position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;
   }
   .bidova-handbook .mobile-chapter-label{
     display:flex;align-items:center;justify-content:space-between;
